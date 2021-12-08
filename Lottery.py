@@ -21,3 +21,7 @@ while num <= 3: # limit for the input loop
         else:
             print("\033[31m\033[1mError!\033[00m \033[34mYou have \033[4malready picked this number\033[00m")
             continue
+    else:
+        print("\033[31m\033[1mInvalid input:\033[00m \033[35mout of range.\033[00m")
+        continue
+    num += 1
