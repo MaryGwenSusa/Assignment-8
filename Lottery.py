@@ -47,3 +47,7 @@ def main():
         betNumbers = userBet()
         lottoResult = winningNumbers()
         evaluator(betNumbers, lottoResult)
+
+confirm = 'y'
+while 'y' in confirm:
+    chance = input("\033[35mTry Again? \033[3mY/N\033[00m \n>>> ").lower()
