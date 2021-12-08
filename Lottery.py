@@ -47,13 +47,21 @@ def main():
         betNumbers = userBet()
         lottoResult = winningNumbers()
         evaluator(betNumbers, lottoResult)
+        resultLoop()
 
-confirm = 'y'
-while 'y' in confirm:
-    chance = input("\033[35mTry Again? \033[3mY/N\033[00m \n>>> ").lower()
-    if "y" in chance:
-        print("\033[36mThis might be your lucky round! ^__^\033[00m")
-        main()
-    elif "n" in chance:
-        print("\033[32mThank you for playing! <<3\033[00m")
-        broke.exit()
+def resultLoop():
+    confirm = 'y'
+    while 'y' in confirm:
+        chance = input("\033[35mTry Again? \033[3mY/N\033[00m \n>>> ").lower()
+        if "y" in chance:
+            print("\033[36mThis might be your lucky round! ^__^\033[00m")
+            main()
+        elif "n" in chance:
+            print("\033[32mThank you for playing! <<3\033[00m")
+            broke.exit()
+        elif not("y" in chance) and not("n" in chance):
+            print("\033[31m\033[1mInvalid input:\033[00m \033[35mnone of the choices.\033[00m")
+            continue
+
+header()
+main()
