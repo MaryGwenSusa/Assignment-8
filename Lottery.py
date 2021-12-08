@@ -32,3 +32,11 @@ def winningNumbers():
     winningNum = sorted(random.sample(range(0,9), 3)) 
     lotteryNumbers.append(winningNum) # adds items on the lotteryNumbers variable (for list)
     return lotteryNumbers
+
+def evaluator(userBet, lottoNum):
+    print("Your bet were:", userBet)
+    print("The winning numbers are:", lottoNum)
+    if userBet == lottoNum:
+        print ("\033[32m\033[1mWinner!^__^\033[00m")
+    else:
+        print ("\033[34mYou lose :<\033[00m")
