@@ -40,3 +40,10 @@ def evaluator(userBet, lottoNum):
         print ("\033[32m\033[1mWinner!^__^\033[00m")
     else:
         print ("\033[34mYou lose :<\033[00m")
+
+def main():
+    tryAgain = True
+    while tryAgain:
+        betNumbers = userBet()
+        lottoResult = winningNumbers()
+        evaluator(betNumbers, lottoResult)
