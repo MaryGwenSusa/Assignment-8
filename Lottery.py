@@ -54,3 +54,6 @@ while 'y' in confirm:
     if "y" in chance:
         print("\033[36mThis might be your lucky round! ^__^\033[00m")
         main()
+    elif "n" in chance:
+        print("\033[32mThank you for playing! <<3\033[00m")
+        broke.exit()
