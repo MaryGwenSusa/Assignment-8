@@ -6,22 +6,23 @@ def header():
     print(title)
     print("*" * len(title))
 
-
-num = 1
-bets = [] # initialized an empty list
-while num <= 3: # limit for the input loop
-    try:
-        guess = int(input(f"Enter guess #" + str(num) + "(0-9): ")) 
-    except ValueError: # input validation for decimals and alpa format
-        print("\033[33mYou did not type an \033[4minteger.\033[00m")
-        continue
-    if (0 <= guess <= 9):
-        if guess not in bets: # no duplicates
-            bets.append(guess)
-        else:
-            print("\033[31m\033[1mError!\033[00m \033[34mYou have \033[4malready picked this number\033[00m")
+def userBet():
+    num = 1
+    bets = []
+    while num <= 3:
+        try:
+            guess = int(input(f"Enter guess #" + str(num) + "(0-9): ")) 
+        except ValueError:
+            print("You did not type an integer.")
             continue
-    else:
-        print("\033[31m\033[1mInvalid input:\033[00m \033[35mout of range.\033[00m")
-        continue
-    num += 1
+        if (0 <= guess <= 9):
+            if guess not in bets:
+                bets.append(guess)
+            else:
+                print("Error! You have already picked this number")
+                continue
+        else:
+            print("Invalid input: out of range.")
+            continue
+        num += 1
+    return sorted(bets) 
