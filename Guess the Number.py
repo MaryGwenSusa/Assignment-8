@@ -15,3 +15,9 @@ def guessingNumber():
         except ValueError: # input validation for decimals and alpa format
             print("\033[33mYou did not type an \033[4minteger.\033[00m")
             continue
+        no = "\033[31m\033[1mInvalid input:\033[00m \033[35mout of range.\033[00m"
+        if guess > secretNum:
+            if not(guess > 100):
+                print("\033[31mYour guess is \033[4mgreater than\033[0m \033[31mthe \033[3mrandom number!\033[00m")
+            else:
+                print(no)
