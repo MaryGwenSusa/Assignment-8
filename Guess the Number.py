@@ -21,3 +21,14 @@ def guessingNumber():
                 print("\033[31mYour guess is \033[4mgreater than\033[0m \033[31mthe \033[3mrandom number!\033[00m")
             else:
                 print(no)
+        elif guess < secretNum:
+            if not(guess < 0):
+                print("\033[32mYour guess is \033[4mless than\033[0m \033[32mthe \033[3mrandom number!\033[00m")
+            else:
+                print(no)
+        else:
+            print("\033[34mYou have guessed it right! Good job, %s ^__^\033[00m" % (UserName))
+            break
+
+header()
+guessingNumber()
