@@ -9,3 +9,9 @@ def guessingNumber():
     print('\033[92mOkay, '+ UserName + '. You are guessing a number between \033[1m0 and 100.\033[00m')
     secretNum = anyFT(0,100) #random.choice
     numberOfGuesses = True
+    while numberOfGuesses:
+        try:
+            guess = int(input("\033[95mWhat's your guess?\033[00m\n\033[93m>>>\033[00m "))
+        except ValueError: # input validation for decimals and alpa format
+            print("\033[33mYou did not type an \033[4minteger.\033[00m")
+            continue
